@@ -46,8 +46,8 @@ public class ItemsManager {
 		_nextId = 0;
 		//Ensure that _nextId will always produce a higher number than any existing id
 		foreach (var item in _items) {
-			if (item.Id <= _nextId) continue;
-			_nextId = item.Id;
+			if (item.Id < _nextId) continue;
+			_nextId = item.Id + 1;
 		}
 	}
 
