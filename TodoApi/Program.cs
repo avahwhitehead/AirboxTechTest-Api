@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using TodoApi.Managers;
 
 namespace TodoApi;
 
@@ -21,6 +22,9 @@ public class Program {
 		//Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 		builder.Services.AddEndpointsApiExplorer();
 		builder.Services.AddSwaggerGen();
+
+		//Items Manager
+		builder.Services.AddSingleton<ItemsManager>();
 
 		var app = builder.Build();
 
