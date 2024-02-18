@@ -34,7 +34,7 @@ public class ItemDescriptor {
     public ItemDescriptor Clone() {
         return new ItemDescriptor {
             Priority = Priority,
-            Assignedto = Assignedto,
+            AssignedTo = AssignedTo,
             TaskStatus = TaskStatus,
             TaskSummary = TaskSummary,
         };
@@ -56,7 +56,7 @@ public class Item: ItemDescriptor {
         return new Item {
             Id = Id,
             Priority = Priority,
-            Assignedto = Assignedto,
+            AssignedTo = AssignedTo,
             TaskStatus = TaskStatus,
             TaskSummary = TaskSummary,
         };

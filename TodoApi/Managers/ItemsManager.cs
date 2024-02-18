@@ -7,35 +7,35 @@ public class ItemsManager {
 	private readonly List<Item> _items = new List<Item> {
 		new Item {
 			Id = 1,
-			Assignedto = "User1",
+			AssignedTo = "User1",
 			Priority = Priority.LOW,
 			TaskStatus = "In Progress",
 			TaskSummary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ante euismod, rhoncus mauris non, facilisis mauris. Praesent in tellus risus. Ut euismod sapien eu tincidunt efficitur.",
 		},
 		new Item {
 			Id = 2,
-			Assignedto = "User2",
+			AssignedTo = "User2",
 			Priority = Priority.HIGH,
 			TaskStatus = "To Do",
 			TaskSummary = "Donec sit amet semper velit. Nulla tincidunt luctus porttitor. Nam vitae ante quis ipsum tincidunt sagittis. Suspendisse potenti. In porttitor lectus nibh, ut venenatis purus commodo a. ",
 		},
 		new Item {
 			Id = 3,
-			Assignedto = "User1",
+			AssignedTo = "User1",
 			Priority = Priority.MEDIUM,
 			TaskStatus = "Done",
 			TaskSummary = "Etiam vestibulum luctus urna eu mollis. Aliquam vitae purus vitae mi efficitur dignissim eu ac risus. Fusce facilisis enim vel faucibus interdum.",
 		},
 		new Item {
 			Id = 4,
-			Assignedto = "User3",
+			AssignedTo = "User3",
 			Priority = Priority.UNASSIGNED,
 			TaskStatus = "In Progress",
 			TaskSummary = "Praesent consequat turpis a risus elementum vestibulum. Quisque vehicula augue et diam suscipit aliquet. Fusce euismod diam vel eros euismod, a lacinia mauris sagittis",
 		},
 		new Item {
 			Id = 5,
-			Assignedto = "User1",
+			AssignedTo = "User1",
 			Priority = Priority.UNASSIGNED,
 			TaskStatus = "Done",
 			TaskSummary = "Curabitur posuere ante non lacus consectetur, at blandit enim vestibulum. Suspendisse ornare urna eu blandit finibus. Maecenas interdum tellus id posuere lacinia.",
@@ -102,7 +102,7 @@ public class ItemsManager {
 			throw new KeyNotFoundException($"Couldn't find task with Id {taskId}");
 		}
 		//Update the item with the new data
-		item.Assignedto = descriptor.Assignedto;
+		item.AssignedTo = descriptor.AssignedTo;
 		item.Priority = descriptor.Priority;
 		item.TaskStatus = descriptor.TaskStatus;
 		item.TaskSummary = descriptor.TaskSummary;
@@ -122,7 +122,7 @@ public class ItemsManager {
 			throw new KeyNotFoundException($"Couldn't find task with Id {descriptor.Id}");
 		}
 		//Update the item with the new data
-		item.Assignedto = descriptor.Assignedto;
+		item.AssignedTo = descriptor.AssignedTo;
 		item.Priority = descriptor.Priority;
 		item.TaskStatus = descriptor.TaskStatus;
 		item.TaskSummary = descriptor.TaskSummary;
@@ -148,7 +148,7 @@ public class ItemsManager {
 	private Item DescriptorToItem(ItemDescriptor item) {
 		return new Item {
 			Id = _nextId++,
-			Assignedto = item.Assignedto,
+			AssignedTo = item.AssignedTo,
 			Priority = item.Priority,
 			TaskStatus = item.TaskStatus,
 			TaskSummary = item.TaskSummary,
