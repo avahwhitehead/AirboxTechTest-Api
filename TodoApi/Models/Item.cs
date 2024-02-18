@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace TodoApi.Models;
 
@@ -6,25 +7,25 @@ public class ItemDescriptor {
     /// <summary>
     /// The priority given to the task
     /// </summary>
-    [JsonPropertyName("priority")]
+    [JsonProperty("priority")]
     public Priority Priority { get; set; }
 
     /// <summary>
     /// The task status
     /// </summary>
-    [JsonPropertyName("taskStatus")]
+    [JsonProperty("taskStatus")]
     public string TaskStatus { get; set; }
 
     /// <summary>
     /// The user id associated with the task
     /// </summary>
-    [JsonPropertyName("assignedto")]
-    public string Assignedto { get; set; }
+    [JsonProperty("assignedto")]
+    public string AssignedTo { get; set; }
 
     /// <summary>
     /// A short summary to be displayed in task lists
     /// </summary>
-    [JsonPropertyName("tasksummary")]
+    [JsonProperty("tasksummary")]
     public string TaskSummary { get; set; }
 
     /// <summary>
@@ -45,7 +46,7 @@ public class Item: ItemDescriptor {
     /// <summary>
     /// The Task Id used internally
     /// </summary>
-    [JsonPropertyName("TaskId")]
+    [JsonProperty("taskId")]
     public int Id { get; set; }
 
     /// <summary>

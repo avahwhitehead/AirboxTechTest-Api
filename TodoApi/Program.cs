@@ -20,8 +20,10 @@ public class Program {
 
 		//Add Swagger description to the endpoints
 		//Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-		builder.Services.AddEndpointsApiExplorer();
-		builder.Services.AddSwaggerGen();
+		builder.Services
+			.AddEndpointsApiExplorer()
+			.AddSwaggerGen()
+			.AddSwaggerGenNewtonsoftSupport();
 
 		//Items Manager
 		builder.Services.AddSingleton<ItemsManager>();
